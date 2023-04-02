@@ -42,6 +42,19 @@ body {
   color: #ffffff;
 }
 
+.skeleton__sidebar-img {
+  width: 250px;
+  height: 150px;
+  background: #313131;
+}
+
+.skeleton__playlist-item {
+  width: 100%;
+  height: 51px;
+  background: #313131;
+  margin-bottom: 12px;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -143,6 +156,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .nav__menu {
@@ -216,6 +230,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 51px;
+  position: relative;
 }
 
 .centerblock__content {
@@ -304,8 +319,63 @@ body {
   padding: 6px 20px;
 }
 
+.filter__button_active {
+  color: #b672ff;
+  border: 1px solid #9a48f1;
+}
+
 .filter__button:not(:last-child) {
   margin-right: 10px;
+}
+
+.filter__menu {
+  position: absolute;
+  top: 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 34px;
+  gap: 10px;
+  background: #313131;
+  border-radius: 12px;
+}
+
+.filter__menu_authors {
+  left: 92px;
+}
+
+.filter__menu_years {
+  left: 246px;
+}
+
+.filter__menu_genres {
+  left: 400px;
+}
+
+.filter__menu-item {
+  font-family: "StratosSkyeng";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.filter__menu-item:hover {
+  color: #b672ff;
+}
+
+.filter__menu-item_checked {
+  font-family: "StratosSkyeng";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #b672ff;
 }
 
 .content__title {
@@ -869,8 +939,44 @@ body {
 
 .volume__progress {
   width: 109px;
+  display: flex;
 }
 
 .volume__progress-line {
   width: 109px;
+}
+
+input[type="range"] {
+  width: 109px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  border-radius: 10px/100%;
+  height: 2px;
+  background-color: #fff;
+}
+input[type="range"]::-webkit-slider-thumb {
+  background: #1A1A1A;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px/100%;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  -webkit-appearance: none;
+  margin-top: -5px;
+  
+}
+
+input[type="range"]::-moz-range-track {
+  border-radius: 10px/100%;
+  height: 2px;
+  background-color: #fff;
+}
+input[type="range"]::-moz-range-thumb {
+  background: #1A1A1A;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px/100%;
+  cursor: pointer;
 }
